@@ -1,0 +1,19 @@
+/* MIU
+   Term 1306
+   Banchop Ben Kangdouangnhot
+   Project 1
+ */
+   
+   
+label.error {
+
+display:block; margin:10px, 0; color:#cc0000;
+
+}
+
+#formerrorlink {
+
+display:none;
+
+}
+
