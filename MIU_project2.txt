@@ -1,3 +1,0 @@
-http://benzeclipse.github.com/gold2
-
-https://github.com/benzeclipse/gold2.git

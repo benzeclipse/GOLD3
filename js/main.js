@@ -1,3 +1,10 @@
+// MIU
+// Term 1306
+// Banchop Ben Kangdouangnhot
+// Project 3
+
+
+
 var parseIn = function(data){
 	console.log(data);
 

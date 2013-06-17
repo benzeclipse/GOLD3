@@ -1,10 +1,11 @@
 /* MIU
    Term 1306
    Banchop Ben Kangdouangnhot
-   Project 1
+   Project 3
  */
    
-   
+
+
 label.error {
 
 display:block; margin:10px, 0; color:#cc0000;
@@ -16,4 +17,3 @@ display:block; margin:10px, 0; color:#cc0000;
 display:none;
 
 }
-

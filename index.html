@@ -1,7 +1,7 @@
 <!-- MIU
  Term 1306
  Banchop Ben Kangdouangnhot
- Project 2 -->
+ Project 3 -->
 <!doctype html>  
 <html lang="en">
 <head>
@@ -20,8 +20,8 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	 <link rel="stylesheet" href="css/style.css" /> 
-	
+	<link rel="stylesheet" href="css/style.css" /> 
+	<link rel="stylesheet" href="css/stylesVfw.css" /> 
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -64,7 +64,7 @@
 			
 				<ul data-role="listview"  data-theme="e" >
 		 			<li>
-		 				<a href="additem.html" data-ajax="false" >
+		 				<a href="#testform" data-ajax="false" >
 		 			    <p style="color: red" align="middle"><br>Today's specials!</br></p>
 		 			    <img src="images/carolina.jpg" alt="Hat" />
 		 			    <p style="color: red" align="middle">Only $19.99!</p>
@@ -121,7 +121,7 @@
 		<div data-role="footer" >
       	 	 <div data-role="navbar">
          	   	<ul>
-               		 <li><a href="#contactUs" data-icon="bars" class="ui-btn-active">Info</a></li>
+               		 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
                		 <li><a href="#newsfeed" data-icon="info">Feeds</a></li>
                		 <li><a href="#links" data-icon="gear">About Us</a></li>
            	 	 </ul>
@@ -958,7 +958,8 @@
       	  <div data-role="navbar">
          	   <ul> 
                	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-               	 <li><a href="#newsfeed" data-icon="info">Feeds</a></li>  	
+               	 <li><a href="#newsfeed" data-icon="info">Feeds</a></li>  
+               	  <li><a href="#links" data-icon="gear">About Us</a></li>	
            	 </ul>
        	 </div><!-- /navbar -->
 	</div><!-- /footer -->	   
@@ -1006,10 +1007,158 @@
 
 
 
+
+	<!-- forms -->   
+	<div data-role="page" id="testform"  data-add-back-btn="true"> 
+	
+		<div data-role="header" data-position="fixed" data-theme="b" >
+			<h1>Ticket Hub</h1>
+		</div>
+		
+			
+	<div data-role="content">
+			
+		<form action="#" method="post" id="recordform" >  <!-- Adding a form   -->
+		
+			<div data-role="fieldcontain">
+				<h2 align="middle">Information</h2>
+			</div>
+			
+				<div data-role="fieldcontain"> <!-- reset/submit BUTTONS   -->
+					<div><input type="submit" value="submit" /></div>
+				</div>
+
+				<div data-role="fieldcontain"> <!-- drop down list   -->
+					<label for="pick">Pick:</label>
+						<select name="pick" id="pickSports">
+						<option data-placeholder="true">Pick Sport</option> <!-- place holder   -->
+							<optgroup label="Popular Sports"> <!-- making sub groups   -->
+								<option value="NFC">NFC</option> 
+								<option value="NBA">NBA</option>
+								<option value="MLB">MLB</option>  
+							</optgroup>
+						</select>
+				</div>
+			
+		
+			<div data-role="fieldcontain" >  <!-- adding awesome lines!   -->
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="fullname" class="required" class="error"  />
+			</div>
+				
+			
+					<!-- regular input field -->
+					<div data-role="fieldcontain" >
+						<label for="email">E-mail:</label>
+						<input type="text" name="email" id="email"  class="required email" /> 
+					</div>
+		
+				
+				<!-- toggle   -->
+				<div data-role="fieldcontain" > 
+					<label for="toggle">Apply for Credit: </label>
+					<select data-role="slider">
+					<option value="off">No</option>
+					<option value="off">Yes</option>
+					</select>
+				</div>
+				
+					<!-- regular input field -->
+					<div data-role="fieldcontain" >
+						<label for="credit">SSN for credit application (optional):</label>
+						<input type="text" name="credit" id="email" /> 
+					</div>
+					
+					
+					
+					
+						<!-- range sliders   -->
+						<div data-role="fieldcontain" > 
+							<label for="range">How many items:</label>
+							<input type="range" name="ranges" id="ranges" value="0" min="0" max="100" />
+						</div>
+						
+				
+				<!-- radios   -->
+				<div data-role="fieldcontain" > 
+					<fieldset data-role="controlgroup">
+						<legend>Gender:</legend>
+						<input type="radio" value="male" name="male-1" id="male-role-1"  />
+						<label for="male-role-1">Male</label>
+						<input type="radio" value="female" name="female-1" id="female-role-2" />
+						<label for="female-role-2">Female</label>
+					</fieldset>
+				</div>
+			
+		
+					 <!-- large text fields   -->
+					<br>	
+					<div data-role="fieldcontain" >
+						<label for="concerns">Concerns:</label>
+						<textarea></textarea>
+					</div>
+					</br>
+					
+		
+				
+				<!-- reset/submit BUTTONS   -->	
+				<div data-role="fieldcontain" > 
+					<div><br><input type="reset" value="reset" data-theme="a" /><br></div>
+					<div><input type="submit" value="submit" /></div>
+				</div>
+				
+		
+				<!-- opening pop up page  -->
+				<a href="#formErrors" id="formerrorlink" data-rel="dialog" data-transition="pop">Open errors</a>
+		
+				</form>
+			 </div>	
+		
+			
+		  <div data-role="footer" data-position="fixed">
+      	 	 <div data-role="navbar">
+         	  	 <ul>
+              	  	 <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+              	 	 <li><a href="#newsfeed" data-icon="info">Feeds</a></li>
+               		 <li><a href="#links" data-icon="gear">About Us</a></li>
+           		 </ul>
+       		 </div> <!--navbar -->
+		 </div> <!--footer -->  
+			
+	</div>
+
+
+
+
+
+
+	<!-- pop up dialog-->   
+	<div data-role="dialog" id="formErrors" > 
+		<div data-role="header" data-position="fixed" data-theme="b" >
+			<h1>Missing fields</h1>
+		</div>		
+			<div data-role="content">	
+				<ul>
+					<li>Test.</li>
+				</ul>		
+			</div>		
+	</div>		
+			
+			
+			
+
+
+
+
+
+
+
+
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-	
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>
